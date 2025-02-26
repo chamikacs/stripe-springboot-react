@@ -30,6 +30,7 @@ function IntegratedCheckout() {
         items: items.map((elem) => ({ name: elem.name, id: elem.id })),
         customerName: name,
         customerEmail: email,
+        invoiceNeeded: true,
       }),
     })
       .then((r) => r.text())

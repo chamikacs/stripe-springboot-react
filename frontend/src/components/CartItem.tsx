@@ -69,7 +69,7 @@ function CartItem(props: CartItemProps) {
   );
 }
 
-// ✅ Define CSS styles
+//  Define CSS styles
 const styles: Record<string, React.CSSProperties> = {
   card: {
     display: "flex",
@@ -134,7 +134,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
 };
 
-// ✅ Type Definitions
+//  Type Definitions
 export interface StripeSubscriptionData {
   subscriptionId: string;
   nextPaymentDate: string;

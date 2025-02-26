@@ -21,6 +21,7 @@ function CustomerDetails(props: CustomerDetailsProp) {
         items: props.data.map((elem) => ({ name: elem.name, id: elem.id })),
         customerName: name,
         customerEmail: email,
+        invoiceNeeded: true,
       }),
     })
       .then((r) => r.text())

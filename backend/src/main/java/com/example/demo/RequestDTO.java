@@ -7,6 +7,7 @@ public class RequestDTO {
     String customerName;
     String customerEmail;
     String subscriptionId;
+    Boolean invoiceNeeded;
 
     public Product[] getItems() {
         return items;
@@ -21,6 +22,10 @@ public class RequestDTO {
     }
     public String getSubscriptionId() {
         return subscriptionId;
+    }
+
+    public Boolean isInvoiceNeeded() {
+        return invoiceNeeded;
     }
 
 }

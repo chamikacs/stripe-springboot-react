@@ -6,6 +6,8 @@ import Failure from "./routes/Failure.tsx";
 import IntegratedCheckout from "./routes/IntegratedCheckout.tsx";
 import NewSubscription from "./components/NewSubscription.tsx";
 import CancelSubscription from "./components/CancelSubscriptions.tsx";
+import SubscriptionWithTrial from "./components/SubscriptionWithTrial.tsx";
+import ViewInvoices from "./routes/ViewInvoices.tsx";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,6 +31,14 @@ function App() {
       path: "/cancel-subscription",
       element: <CancelSubscription />,
     },
+    {
+        path: "/subscription-with-trial",
+        element: <SubscriptionWithTrial />,
+    },
+    {
+            path: "/view-invoices",
+            element: <ViewInvoices />,
+        },
     {
       path: "/success",
       element: <Success />,
