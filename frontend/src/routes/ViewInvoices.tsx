@@ -21,7 +21,7 @@ function ViewInvoices() {
         setInvoices(r)
       })
   }
-
+ 
   return (
     <div style={styles.container}>
       <div style={styles.content}>

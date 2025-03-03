@@ -9,6 +9,8 @@ import com.stripe.model.*;
 import com.stripe.model.checkout.Session;
 import com.stripe.param.*;
 import com.stripe.param.checkout.SessionCreateParams;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import com.stripe.param.checkout.SessionCreateParams.LineItem.PriceData;
@@ -25,6 +27,7 @@ import static com.example.demo.ProductDAO.calculateOrderAmount;
 @CrossOrigin
 public class PaymentController {
 
+    private static final Logger log = LoggerFactory.getLogger(PaymentController.class);
     @Value("${stripe.api.key}")
     private String STRIPE_API_KEY;
 
@@ -157,7 +160,7 @@ public class PaymentController {
             // Retrieve the payment intent object from the invoice
             paymentIntent = PaymentIntent.retrieve(invoice.getPaymentIntent());
         }
-
+        System.out.println("Made Payment");
         // Send the client secret from the payment intent to the client
         return paymentIntent.getClientSecret();
     }
